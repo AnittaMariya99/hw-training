@@ -1,0 +1,15 @@
+Morning meeting: Orientation follow-up & reviewed Ramesh’s materials
+Introduction with QA: Understood QA’s role
+Tools discussed: VS Code, Sublime, IPython, Git, MongoDB, Mongosh, Compass
+Task 1 corrections completed – Daily Training Log Workflow in Git
+Learning topics:
+1.Git commands – version control, collaboration (init, add, commit, push, pull, status)
+2.CI/CD
+3.Effective use of Git
+References for next session:
+1.Linux basics
+2.package installers (apt-get, pip)
+3.text editors (nano, vim)
+4.IDEs (Sublime, VS Code)
+5.virtual environment
+6.IPython
