@@ -1,11 +1,12 @@
 Morning meeting completed
+
 Learning topic: Python Basics
 1.Indentation (space, tab)
 2.Data types: str, int, float, boolean, list, dict, tuple, set, None
 3.Basic operations, if-else, loops
 4.Functions, OOP concepts: classes/objects, inheritance, lambda, syntax
-Next session: MongoDB Setup & Basics
 
+Next session: MongoDB Setup & Basics
 .Installed MongoDB & MongoShell
 .Familiarised with MongoDB shell
 .Basic operations: insert, delete, update, bulk insert
