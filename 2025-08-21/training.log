@@ -1,15 +1,169 @@
-Morning meeting completed
 
-Installed & explored MongoDB Compass
+##################################################################################################################################################3
 
-Finished environment setup (VS Code, IPython, Git, MongoDB, Mongosh, Compass)
 
-Revised Python basics (data types, control flow, OOP)
+MongoDB & Compass
+Section 1: Basics – Database & Collection Operations
+Task: MongoDB Create and Explore
+Part 1: Insert, Update, Delete, Bulk Insert
+Step 1: Create and Insert
+Create a database called companyDB and a collection named employees.
+Insert one employee document manually:
+{
+  "empId": 101,
+  "name": "Ravi",
+  "department": "IT",
+  "salary": 75000,
+  "isActive": true
+}
 
-Completed Python tasks: Student Marks, Grocery Store
+ANS:
+use companyDB
 
-MongoDB tasks: Insert/Update/Delete, Import/Export, Indexing, Sharding (theory), Object ID
+db.employees.insertOne({
+  "empId": 101,
+  "name": "Ravi",
+  "department": "IT",
+  "salary": 75000,
+  "isActive": true
+})
 
-Compass tasks: Connect, Query ($or/$and), CRUD, Aggregation, Schema & Indexes
 
-Linux basics: commands, Scrapy install (apt/pip), nano editor, Sublime, virtual env with Scrapy
+Step 2: Bulk Insert
+Prepare and insert at least 5 more employee documents using a bulk insert (array of documents).
+
+ANS:
+db.employees.insertMany
+([
+  { "empId": 102, "name": "Anitta", "department": "HR", "salary": 75000, "isActive": true },
+  { "empId": 103, "name": "Jofin", "department": "Finance", "salary": 90000, "isActive": false },
+  { "empId": 104, "name": "Sheela", "department": "IT", "salary": 60000, "isActive": true },
+  { "empId": 105, "name": "Shaji", "department": "Marketing", "salary": 30000, "isActive": true },
+  { "empId": 106, "name": "Sefin", "department": "IT", "salary": 70000, "isActive": false },
+  { "empId": 102, "name": "mariya", "department": "HR", "salary": 75000, "isActive": true },
+  { "empId": 103, "name": "Johnson", "department": "Finance", "salary": 90000, "isActive": false },
+  { "empId": 104, "name": "Suma", "department": "IT", "salary": 60000, "isActive": true },
+  { "empId": 105, "name": "Seena", "department": "Marketing", "salary": 30000, "isActive": true },
+  { "empId": 106, "name": "Sayi", "department": "IT", "salary": 70000, "isActive": false }
+
+])
+
+
+Step 3: Update
+Update the salary of all employees in the IT department by 10%.
+
+ANS:
+db.employees.updateMany(
+  { department: "IT" },
+  { $mul: { salary: 1.10 } }
+)
+
+
+Step 4: Delete
+Delete the record of any employee who is marked as IsActive: false.
+
+ANS:
+db.employees.deleteMany({ isActive: false })
+
+Part 2: Exporting, Importing, Dumping, and Restore
+Step 5: Export
+Export the employees collection to a JSON & CSV file using  the mongoexport command.
+
+ANS:
+# Export to JSON
+mongoexport --db=companyDB --collection=employees --out=employees.json
+
+# Export to CSV
+mongoexport --db=companyDB --collection=employees --type=csv --fields=empId,name,department,salary,isActive --out=employees.csv
+
+
+Step 6: Dump
+Create a full database dump of companyDB using mongodump.
+
+ANS:
+mongodump --db=companyDB --out=backup/companyDB_dump
+
+Step 7: Drop the Database
+Drop the companyDB database from MongoDB.
+
+ANS:
+use companyDB
+db.dropDatabase()
+
+Step 8: Restore
+Use mongorestore to restore the database from the dump created in Step 6.
+
+ANS:
+mongorestore --db=companyDB backup/companyDB_dump/companyDB
+
+Step 9: Import
+Import a sample employee data JSON or CSV into a new collection called importedEmployees.
+
+ANS:
+mongoimport --db=companyDB --collection=importedEmployees --file=employees.json --jsonArray
+
+Part 3: Indexing
+Step 10: Create Index
+Create a single field index on the department field.
+ANS:
+db.employees.createIndex({ department: 1 })
+
+
+Step 11: Compound Index
+Create a compound index on department and salary.
+ANS:
+db.employees.createIndex({ department: 1, salary: -1 })
+
+Step 12: Validate
+Use .getIndexes() to get all the indexes in a Collection
+Ans:
+db.employees.getIndexes()
+
+
+Part 4: Sharding, Clustering, and Nodes (Theory)
+Step 13: Basic Understanding (Theory / Notes)
+Write a short explanation of the following:
+
+
+What is sharding in MongoDB?
+ANS:
+Sharding is the process of splitting large data sets across multiple servers (shards).
+It helps MongoDB handle very large data and high traffic.
+Data is divided using a shard key.
+Each shard stores only part of the data, but together they make up the full database.
+Used for horizontal scaling (adding more machines instead of upgrading one machine).
+
+What is a replica set?
+ANS:
+A replica set is a group of MongoDB servers that keep the same copy of data.
+Provides high availability and fault tolerance.
+If one server fails, another server takes over automatically.
+It usually has one primary and multiple secondary nodes.
+
+What are a primary node and a secondary node?
+ANS:
+Primary Node:
+Handles all write operations.
+Syncs changes to secondary nodes.
+
+Secondary Node(s):
+Copy data from the primary.
+Used for read operations (if enabled).
+Can become primary during a failover (automatic election).
+
+art 5: Object ID & time stamp
+Step 13: What is objectID and timestamp from an object?
+Get the objectId and convert into a timestamp and wise versa- it’s importance(time bounded data identification)
+ANS:
+A unique identifier MongoDB gives to every document (_id).
+12-byte value:
+4 bytes = timestamp
+5 bytes = machine ID & process ID
+3 bytes = counter
+
+Extract timestamp from ObjectId
+let doc = db.employees.findOne()
+doc._id.getTimestamp()
+
+reate ObjectId from timestamp
+ObjectId(Math.floor(new Date("2024-08-20")/1000).toString(16) + "0000000000000000")

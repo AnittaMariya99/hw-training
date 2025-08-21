@@ -1,0 +1,7 @@
+{"_id":{"$oid":"68a74b349b5f51703289b048"},"empId":101,"name":"Ravi","department":"IT","salary":82500.0,"isActive":true}
+{"_id":{"$oid":"68a74ba79b5f51703289b049"},"empId":102,"name":"Anitta","department":"HR","salary":75000,"isActive":true}
+{"_id":{"$oid":"68a74ba79b5f51703289b04b"},"empId":104,"name":"Sheela","department":"IT","salary":66000.0,"isActive":true}
+{"_id":{"$oid":"68a74ba79b5f51703289b04c"},"empId":105,"name":"Shaji","department":"Marketing","salary":30000,"isActive":true}
+{"_id":{"$oid":"68a74ba79b5f51703289b04e"},"empId":102,"name":"mariya","department":"HR","salary":75000,"isActive":true}
+{"_id":{"$oid":"68a74ba79b5f51703289b050"},"empId":104,"name":"Suma","department":"IT","salary":66000.0,"isActive":true}
+{"_id":{"$oid":"68a74ba79b5f51703289b051"},"empId":105,"name":"Seena","department":"Marketing","salary":30000,"isActive":true}
