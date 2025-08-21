@@ -1,8 +1,20 @@
+Morning meeting completed
 
-##################################################################################################################################################3
+Installed MongoDB Compass & explored features
+
+Completed environment setup: VS Code, IPython, Git, MongoDB, Mongosh, Compass
+
+Revised Python basics (indentation, data types, control flow, functions, OOP)
+
+Python Tasks Completed
+
+Task 1: Student Marks & Report Generator
+
+Task 2: Grocery Store – Data Organizer
+
+MongoDB & Compass Tasks Completed
 
 
-MongoDB & Compass
 Section 1: Basics – Database & Collection Operations
 Task: MongoDB Create and Explore
 Part 1: Insert, Update, Delete, Bulk Insert
@@ -167,3 +179,145 @@ doc._id.getTimestamp()
 
 reate ObjectId from timestamp
 ObjectId(Math.floor(new Date("2024-08-20")/1000).toString(16) + "0000000000000000")
+
+
+#######################################################################################################################################################3
+Section 2: MongoDB Compass
+
+
+Task : MongoDB Compass
+Part 1: Install MongoDB Compass and connect
+Step 1: connect to mongodb
+Install mongodb compass
+Connect to a local host collection
+
+Step 2: Verify Structure
+Use "Documents" tab to browse data.
+Use "Schema" tab to analyze the field types and distributions.
+Identify any data type mismatches or missing fields.
+
+
+
+art 2: Search and Filtering (Querying)
+Step 3: Filter Data Using Query
+Use the filter bar to:
+1.Find all employees from the "HR" department.
+2.Find employees with salary greater than 50000.
+3.Find employees who joined after 2022-01-01.
+
+ANS:
+{ "department": "HR" }
+{ "salary": { "$gt": 50000 } }
+{ "joinDate": { "$gt": ISODate("2022-01-01") } }
+
+
+Step 4: Combine Conditions
+Query to find employees who are:
+1.Active (isActive: true)
+2.Belong to either "HR" or "IT" departments.
+Bonus: Use the $or and $and operators.
+
+ANS:
+{
+  "$and": [
+    { "isActive": true },
+    { "$or": [ { "department": "HR" }, { "department": "IT" } ] }
+  ]
+}
+
+
+Part 3: CRUD Operations in Compass
+Step 5: Perform Updates
+Use the Update Document option to:
+Change the department of one employee.
+Increase salary of all employees in "Sales" by 10,000 using Update Many.
+
+ANS:
+1.Update single document:
+Select a document → Edit Document → change department value.
+2.Update Many (e.g., Sales salary +10,000):
+Use Update Many → Filter: { "department": "Sales" } → Update:
+{ "$inc": { "salary": 10000 } }
+
+
+Step 6: Deletion
+Delete a document using Delete button.
+Use Delete Many to remove all inactive employees.
+
+ANS:
+1.Delete single document → Click Delete button on the document.
+2.Delete Many inactive employees:
+Filter: { "isActive": false } → Click Delete Many.
+
+
+Part 4: Aggregation Pipeline Builder
+Step 7: Aggregation – Department-wise Salary Stats
+Open the Aggregation tab.
+Create a pipeline with these stages:
+1.$group by department
+2.Calculate avgSalary, maxSalary, minSalary using $avg, $max, $min
+
+ANS:
+{
+  "_id": "$department",
+  "avgSalary": { "$avg": "$salary" },
+  "maxSalary": { "$max": "$salary" },
+  "minSalary": { "$min": "$salary" }
+}
+
+
+
+Step 8: Aggregation – Filter + Sort
+Add these stages:
+1.$match employees with salary > 50000
+2.sort by salary descending
+ANS:
+{ "salary": { "$gt": 50000 } }
+{ "salary": -1 }
+
+
+Step 9: Aggregation – Project Fields
+Use $project to display:
+Only name, salary, and department
+Add a new computed field: annualSalary = salary * 12
+
+ANS:
+{
+  "name": 1,
+  "salary": 1,
+  "department": 1,
+  "annualSalary": { "$multiply": ["$salary", 12] }
+}
+
+
+Part 5: Schema Analysis & Indexes
+Step 10: Analyze Schema
+Open Schema tab.
+Analyze:
+Which fields are always present or optional?
+Check for any inconsistent data types (e.g., age as string in some docs).
+
+
+ANS:
+1. Fields always present:
+   - empId, name, department, salary, isActive
+2. Optional fields:
+   - joinDate, address
+3. Inconsistent data types:
+   - Check if age is stored as string in some documents.  
+
+
+
+Step 11: Index Management
+Go to Indexes tab.
+Create an index on department and salary.
+Observe how indexing affects performance (for filtering/sorting).
+
+ANS:
+1.Create Index:
+Click Create Index → Select department and salary fields → Choose ascending/descending order.
+{ "department": 1, "salary": -1 }
+2.Observation:
+Indexes improve query performance by allowing faster lookups.   
+Use Explain Plan to see how the index improves query performance.   
+
