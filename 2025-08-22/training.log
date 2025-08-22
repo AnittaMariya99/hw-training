@@ -1,0 +1,17 @@
+Morning meeting completed
+
+Revised basic Linux commands: navigation, file ops, permissions, process mgmt, downloads
+
+Topics Covered
+
+Basic Data Formats – JSON, CSV, TSV, XML + comparison
+
+Command-Line Conversions – csvkit, in2csv, jq, xmltodict, ETL tools
+
+Extra Tools – Zenmate VPN, JSON Formatter, Grammarly, WebScraper
+
+Pandas – Reading (CSV, TSV, Excel, JSON), Cleaning (missing, duplicates, rename), Exporting (CSV, JSON, Excel, TSV)
+
+Sublime Text – Installed Package Control, Pretty JSON (Beautify Ctrl+Alt+J, Minify Ctrl+Alt+M)
+
+Practical Conversion Workflow – WebScraper → JSON → Pandas → Clean → Export (CSV); JSON ↔ CSV ↔ TSV ↔ XML
