@@ -1,0 +1,5 @@
+- Learned Regex for pattern matching.
+- Cross-checked JSON file data with website – Task completed.
+- Cross-checked CSV file with website, verified field formats, prices, and uniqueness – Task completed.
+- Automated QA task: 
+  cross-check CSV with website and save mismatches using Python (my own idea).
