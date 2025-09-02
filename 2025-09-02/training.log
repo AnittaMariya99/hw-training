@@ -1,0 +1,24 @@
+1)JSON file data cross-checked with website data
+
+semonin_realtors_2025_09_05.json → Completed
+
+2)Detailed study of Regex concepts and methods
+
+Explored symbols/metacharacters:
+. ^ $ * + ? {} [] () | \d \D \w \W \s \S
+
+Hands-on practice in Sublime Text: regex search, replace, unique line checking
+
+Applied Regex on CSV and JSON datasets for extracting specific fields
+
+Validated data formats (emails, phone numbers, dates, numerical fields)
+
+Practiced Regex methods
+
+match, search, findall, sub
+
+Tested complex patterns with grouping, optional matches, and alternation
+
+Explored real-world applications
+
+Used Regex for scraping and validating website data
