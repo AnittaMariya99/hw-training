@@ -1,1 +1,33 @@
-Morning meeting 
+Morning meeting completed
+
+Regex concepts and methods – Task: longrealty_2025_09_05.json
+
+Detailed study of Regex:
+
+Hands-on practice in Sublime Text (regex search, replace, unique line checking)
+
+Applied Regex on CSV & JSON datasets (field extraction, validation)
+
+Validated formats: emails, phone numbers, dates, numerical fields
+
+Practiced Regex methods: match, search, findall, sub
+
+Tested grouping, optional matches, alternation
+
+Installed & explored MongoDB Compass (GUI tool):
+
+Connected via mongodb://localhost:27017
+
+Browsed databases & collections visually
+
+Practiced querying with filter bar (e.g., { "status": "active" })
+
+Explored Schema visualization for field structures & data types
+
+Performed CRUD operations (insert, update, delete) directly in Compass
+
+Used Aggregation Pipeline Builder: $match, $group, $sort, $project
+
+Learned data import/export (JSON/CSV) for QA validation
+
+Checked indexing & performance insights for queries
