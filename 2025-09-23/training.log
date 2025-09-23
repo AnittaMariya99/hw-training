@@ -1,0 +1,19 @@
+Learning:
+
+QA checks using python script:
+
+- empty columns, unique_id, PDP URL, extracted_date format
+
+- Validated price fields: dot only, single price → regular_price
+
+- Checked currency EUR and grammage columns (2 decimals)
+
+- Ensured regular_price & selling_price numeric with 2 decimals
+
+training task:
+
+Cross-checked CSV file with website data-USING Python script DataHut_SI_Dm_PriceExtractions_20250919.CSV completed
+
+Cross-checked CSV file with website data-USING Python script DataHut_AT_Fressnapf_PriceExtractions_20250919.CSV completed
+
+Cross-checked CSV file with website data-USING Python script DataHut_SI_Dm_PriceExtractions_20250919.CSV completed
