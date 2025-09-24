@@ -1,0 +1,37 @@
+QA Meeting completed
+
+Cross-checked CSV file with website data using Python script
+
+DataHut_CH_Lidl_PriceExtractions_20250923.CSV → ✅ Completed
+
+Work Updates :
+
+Run Python QA-check script in Sublime Text
+
+QA Tool Findings :
+
+Python + Pandas → Automated QA checks:
+
+Price validation (selling_price & regular_price format)
+
+Empty breadcrumbs detection
+
+Competitor name consistency check
+
+OpenRefine → Data cleaning:
+
+Fixed competitor_name variations (e.g., “Lidl” vs “lidl”)
+
+Removed unwanted spaces & special characters
+
+Great Expectations → Rule-based validation:
+
+Ensured selling_price format (float with 2 decimals, no commas)
+
+Checked grammage unit (kg, g, ml, l, pcs, etc.) compliance
+
+Excel → Manual QA logging:
+
+Tracked QA issues in structured sheet (issue log & summary)
+
+Used for quick pivot/reports for daily meeting updates
