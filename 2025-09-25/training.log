@@ -1,0 +1,21 @@
+Morning QA meeting completed.
+
+Cross-checked CSV file with website data – DataHut_CH_Lidl_PriceExtractions_20250923.CSV completed
+
+Python + Pandas → Run automated QA checks (price validation, empty breadcrumbs, competitor name consistency).
+
+OpenRefine → Familiarized with tool, practiced QA tasks:
+
+"Cleaned competitor_name variations (e.g., “Lidl” vs “lidl”)."
+
+"Removed extra spaces and special characters from fields."
+
+"Identified and handled empty values in breadcrumb column."
+
+Task completed :
+
+"Cross-checked CSV file with website data - DataHut_CH_Coop_FullDump_20250925.CSV - completed"
+
+"Cross-checked CSV file with website data - DataHut_CH_Migros_FullDump_20250925.CSV - completed"
+
+"Cross-checked CSV file with website data - DataHut_CH_Lidl_PriceExtractions_20250923.CSV - completed"
