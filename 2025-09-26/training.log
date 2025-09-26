@@ -1,0 +1,15 @@
+Morning QA meeting completed
+
+Cross-checked CSV files with website data:
+
+DataHut_SI_Spar_PriceExtractions_20250926.CSV → completed
+
+DataHut_SI_Dm_PriceExtractions_20250926.CSV → completed
+
+DataHut_SI_Mercator_PriceExtractions_20250926.CSV → completed
+
+Cross-checked FullDump files with website data:
+
+DataHut_SI_Spar_FullDump_20250926.CSV → completed
+
+DataHut_SI_Mercator_FullDump_20250925.CSV → completed
