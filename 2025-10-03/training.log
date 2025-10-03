@@ -1,0 +1,47 @@
+A Tool Findings
+
+Python + Pandas → Automated QA checks:
+
+Price validation (selling_price & regular_price format)
+
+Empty breadcrumbs detection
+
+Competitor name consistency check
+
+OpenRefine → Data cleaning:
+
+Fixed competitor_name variations (e.g., “Lidl” vs “lidl”)
+
+Removed unwanted spaces & special characters
+
+Great Expectations → Rule-based validation:
+
+Ensured selling_price format (float with 2 decimals, no commas)
+
+Checked grammage unit (kg, g, ml, l, pcs, etc.) compliance
+
+Excel → Manual QA logging:
+
+Tracked QA issues in structured sheet (issue log & summary)
+
+Used for quick pivot/reports for daily meeting updates
+
+OpenRefine Tasks
+
+QA checks:
+
+Empty columns, unique_id, PDP URL, extraction_date format
+
+Validated price fields: dot only, single price → regular_price
+
+Checked currency EUR and grammage columns (2 decimals)
+
+Ensured regular_price & selling_price numeric with 2 decimals
+
+QA Tool Report Completed ✅
+
+Cross-checked JSON files with website data:
+
+64350_exprealty_2025_10_05.json ✅ Completed
+
+201_kentwood_2025_10_05.json ✅ Completed
