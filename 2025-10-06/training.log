@@ -1,0 +1,14 @@
+JSON File Checks
+- Cross-checked json file with website data: `houlihanlawrence_2025_10_05.json` ✅ Completed
+- Cross-checked json file with website data: `reecenichols_2025_10_05.json` ✅ Completed
+
+CSV File Checks
+- Cross-checked CSV file with website data: `DataHut_DE_Atu_FullDump_20250922.CSV` ✅ Completed
+
+ QA Tool Checks
+- QAtool check - CSV, JSON, Full Dump ✅ Completed
+- QAtool check - CSV, JSON, Full Dump (detailed checking) ✅ Completed
+
+QA Meetings
+- QAmeeting conducted ✅
+- OpenRefine Tool usage tracked
