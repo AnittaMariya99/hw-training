@@ -1,0 +1,500 @@
+--- Property 1 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-arad-247/
+Name: Land For Sale in Arad
+Flat: None
+Price: 122,473
+Agent Name: Ali Sultan
+Agency Name: Kayan Real Estate
+Call Number: +97332227889
+BF ID: 1129524
+Property Usage: Residential
+Feet Price: BHD. 20
+Property Size: 568.9 m²
+No. of Roads: 1
+Classification: RA
+
+--- Property 2 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-budaiya-73/
+Name: Land For Sale in Budaiya
+Flat: None
+Price: 106,176
+Agent Name: Mohammed khadhem
+Agency Name: Alforsa Real Estate
+Call Number: +97333112396
+BF ID: 834571
+Property Usage: Residential
+Feet Price: BHD. 24
+Property Size: 411 m²
+No. of Roads: 1
+Classification: RB
+
+--- Property 3 ---
+URL: https://bahrainfinder.bh/en/property/apartment-for-sale-in-saraya-2-6/
+Name: Apartment For Sale in Saraya 2
+Flat: None
+Price: 55,000
+Agent Name: Husain
+Agency Name: Kayan Real Estate
+Call Number: +97332227828
+BF ID: 1123375
+Property Usage: Residential
+Property Size: 150 m²
+Built-up status: New
+Bedrooms: 3
+Hall: 1
+Bathrooms: 3
+Garage: 1
+
+--- Property 4 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-hidd-433/
+Name: Land For Sale in Hidd
+Flat: None
+Price: 95,000
+Agent Name: Hussain Ali Al Herz
+Agency Name: Fajar Alkhalij
+Call Number: +97338100144
+BF ID: 1081518
+Property Usage: Residential
+Feet Price: BHD. 24.5
+Property Size: 362.5 m²
+No. of Roads: 1
+Classification: RB
+
+--- Property 5 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-hamalah-1439/
+Name: Land For Sale in Hamalah
+Flat: None
+Price: 58,000
+Agent Name: Manar Jasim
+Agency Name: Grnata Real estate
+Call Number: +97338838170
+BF ID: 1103675
+Property Usage: Commercial / Investment
+Feet Price: BHD. 33.261
+Property Size: 162 m²
+No. of Roads: 1
+Classification: RHA
+
+--- Property 6 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-al-qurayyah-135/
+Name: Land For Sale in Sar
+Flat: None
+Price: 138,160
+Agent Name: Husain Mansoor
+Agency Name: Carlton Real Estate
+Call Number: +97338216600
+BF ID: 1130375
+Property Usage: Residential
+Feet Price: BHD. 29
+Property Size: 442.6 m²
+No. of Roads: 2
+Classification: RA
+
+--- Property 7 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-janabiyah-287/
+Name: Land For Sale in Janabiyah
+Flat: None
+Price: 175,146
+Agent Name: Abdulla Hassan
+Agency Name: Carlton Real Estate
+Call Number: +97332319900
+BF ID: 1093058
+Property Usage: Commercial / Investment
+Feet Price: BHD. 35
+Property Size: 464.9 m²
+No. of Roads: 2
+Classification: B3
+
+--- Property 8 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-juffair-26/
+Name: Land For Sale in Juffair
+Flat: None
+Price: 1,008,802
+Agent Name: Grnata Group 2
+Agency Name: None
+Call Number: +97336700722
+BF ID: 626258
+Property Usage: Commercial / Investment
+Feet Price: BHD. 60
+Property Size: 1562 m²
+No. of Roads: 3
+Classification: BB
+
+--- Property 9 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-maqaba-256/
+Name: Land For Sale in Maqaba
+Flat: Negotiable
+Price: 100,000
+Agent Name: Mohamed Alojaimi
+Agency Name: Grnata Real estate
+Call Number: +97333606034
+BF ID: 1096341
+Property Usage: Residential
+Feet Price: BHD. 30.440
+Property Size: 305.2 m²
+No. of Roads: 1
+Classification: RA
+
+--- Property 10 ---
+URL: https://bahrainfinder.bh/en/property/villa-for-sale-in-malkiya-200/
+Name: Villa For Sale in Malkiya
+Flat: None
+Price: 151,000
+Agent Name: Jaafar Hasan
+Agency Name: Grnata Real estate
+Call Number: +97333545401
+BF ID: 770078
+Property Usage: Residential
+Property Size: 264.2 m²
+Built-up size: 280 m²
+Built-up status: New
+Bedrooms: 3
+Halls: 2
+Bathrooms: 3
+Furnish: Semi Furnished
+No. of Floors: 2
+Garages: 2
+No. of Roads: 2
+Classification: RHA
+
+--- Property 11 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-hallat-abdulsaleh-5/
+Name: Land For Sale in Halat AbdulSaleh
+Flat: None
+Price: 93,491
+Agent Name: Hussain Ali Al Herz
+Agency Name: Fajar Alkhalij
+Call Number: +97338100144
+BF ID: 781599
+Property Usage: Residential
+Feet Price: BHD. 29
+Property Size: 299.5 m²
+No. of Roads: 2
+Classification: RB
+
+--- Property 12 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-arad-236/
+Name: Land For Sale in Arad
+Flat: Negotiable
+Price: 112,484
+Agent Name: Ayman Jaffar
+Agency Name: Darkom real estate
+Call Number: +97338877320
+BF ID: 1085268
+Property Usage: Residential
+Feet Price: BHD. 22
+Property Size: 475 m²
+No. of Roads: 1
+Classification: RA
+
+--- Property 13 ---
+URL: https://bahrainfinder.bh/en/property/villa-for-sale-in-galali-53/
+Name: Villa For Sale in Galali
+Flat: None
+Price: 85,000
+Agent Name: Fadhel Ahmed
+Agency Name: House Me Real Estate
+Call Number: +97316633000
+BF ID: 1048623
+Property Usage: Residential
+Property Size: 75.5 m²
+Built-up status: Old
+Bedrooms: 5
+Hall: 1
+Bathrooms: 4
+No. of Floors: 2
+No. of Roads: 1
+
+--- Property 14 ---
+URL: https://bahrainfinder.bh/en/property/apartment-for-sale-in-isa-town-13/
+Name: Apartment For Sale in Isa Town
+Flat: None
+Price: 75,000
+Agent Name: Grnata Group 2
+Agency Name: None
+Call Number: +97336700722
+BF ID: 641220
+Property Usage: Residential
+Property Size: 168 m²
+Built-up status: Renovated
+Bedrooms: 3
+Hall: 1
+Bathroom: 1
+Furnish: Fully Furnished
+Garage: 1
+
+--- Property 15 ---
+URL: https://bahrainfinder.bh/en/property/villa-for-sale-in-hamad-town-215/
+Name: Villa For Sale in Hamad Town
+Flat: Negotiable
+Price: 122,000
+Agent Name: Dr. Mohamed Saeed
+Agency Name: Grnata Real estate
+Call Number: +97339752929
+BF ID: 1104721
+Property Usage: Residential
+Property Size: 251.7 m²
+Built-up size: 300 m²
+Built-up status: Renovated
+Bedrooms: 3
+Halls: 2
+Bathrooms: 3
+Furnish: Unfurnished
+No. of Floors: 2
+Garages: 3
+No. of Roads: 2
+Classification: MOH
+
+--- Property 16 ---
+URL: https://bahrainfinder.bh/en/property/apartment-for-sale-in-seef-district-239/
+Name: Apartment For Sale in Seef District
+Flat: Negotiable
+Price: 52,000
+Agent Name: Jam Sagum
+Agency Name: Alforsa Leasing
+Call Number: +97333113963
+BF ID: 1122199
+Property Usage: Residential
+Property Size: 70 m²
+Built-up status: Renovated
+Bedroom: 1
+Hall: 1
+Bathrooms: 2
+Furnish: Fully Furnished
+Garage: 1
+
+--- Property 17 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-barbar-170/
+Name: Land For Sale in Barbar
+Flat: None
+Price: 75,000
+Agent Name: Hussain Ali Al Herz
+Agency Name: Fajar Alkhalij
+Call Number: +97338100144
+BF ID: 812079
+Property Usage: Residential
+Feet Price: BHD. 33.7254115
+Property Size: 206.6 m²
+No. of Roads: 1
+Classification: RHA
+
+--- Property 18 ---
+URL: https://bahrainfinder.bh/en/property/villa-for-sale-in-shahrakkan-17/
+Name: Villa For Sale in Shahrakkan
+Flat: None
+Price: 158,000
+Agent Name: Grnata Group 2
+Agency Name: None
+Call Number: +97336700722
+BF ID: 627813
+Property Usage: Residential
+Property Size: 300.9 m²
+Built-up size: 400 m²
+Built-up status: New
+Bedrooms: 3
+Halls: 3
+Bathrooms: 5
+No. of Floors: 2
+Garages: 2
+No. of Roads: 1
+Classification: RA
+
+--- Property 19 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-sanad/
+Name: Land For Sale in Sanad
+Flat: None
+Price: 115,961
+Agent Name: Munther Saleh
+Agency Name: Alforsa real estate
+Call Number: +97333116684
+BF ID: 488579
+Property Usage: Residential
+Feet Price: BHD. 27
+Property Size: 399 m²
+No. of Roads: 1
+Classification: RB
+
+--- Property 20 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-sar-232/
+Name: Land For Sale in Sar
+Flat: None
+Price: 320,425
+Agent Name: Hussain Ali Al Herz
+Agency Name: Fajar Alkhalij
+Call Number: +97338100144
+BF ID: 935610
+Property Usage: Residential
+Feet Price: BHD. 22
+Property Size: 1353.1 m²
+No. of Roads: 1
+Classification: RG
+
+--- Property 21 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-diraz-69/
+Name: Land For Sale in Diraz
+Flat: Negotiable
+Price: 112,844
+Agent Name: Dr. Mohamed Saeed
+Agency Name: Grnata Real estate
+Call Number: +97339752929
+BF ID: 1104699
+Property Usage: Residential
+Feet Price: BHD. 29
+Property Size: 361.5 m²
+No. of Roads: 2
+Classification: RB
+
+--- Property 22 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-dilmunia-35/
+Name: Land For Sale in Dilmunia
+Flat: None
+Price: 220,610
+Agent Name: Grnata Group 2
+Agency Name: None
+Call Number: +97336700722
+BF ID: 650095
+Property Usage: Residential
+Feet Price: BHD. 34
+Property Size: 602.8 m²
+No. of Roads: 1
+Classification: SP
+
+--- Property 23 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-barbar-48/
+Name: Land For Sale in Barbar
+Flat: None
+Price: 173,548
+Agent Name: Grnata Group 2
+Agency Name: None
+Call Number: +97336700722
+BF ID: 446120
+Property Usage: Residential
+Feet Price: BHD. 23
+Property Size: 701 m²
+No. of Roads: 1
+Classification: RA
+
+--- Property 24 ---
+URL: https://bahrainfinder.bh/en/property/building-for-sale-in-maqaba-2/
+Name: Building For Sale in Maqaba
+Flat: None
+Price: 400,000
+Agent Name: Grnata Group 2
+Agency Name: None
+Call Number: +97336700722
+BF ID: 622427
+Property Usage: Residential
+Property Size: 455 m²
+Built-up status: New
+Furnish: Semi Furnished
+No. of Floors: 3
+Garages: 11
+No. of Roads: 1
+Annual Net Income: 23,760 BHD
+Number of Flats: 11
+Classification: RB
+
+--- Property 25 ---
+URL: https://bahrainfinder.bh/en/property/apartment-for-sale-in-marassi-al-bahrain-36/
+Name: Apartment For Sale in Marassi Al Bahrain
+Flat: Negotiable
+Price: 50,000
+Agent Name: Husain Nooh
+Agency Name: LAKUM Real Estates
+Call Number: +97333446011
+BF ID: 1133802
+Property Usage: Residential
+Property Size: 40 m²
+Built-up status: New
+Bedroom: 1
+Hall: 1
+Bathroom: 1
+Furnish: Fully Furnished
+Garage: 1
+Annual Net Income: 3,360 BHD
+
+--- Property 26 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-damistan-330/
+Name: Land For Sale in Damistan
+Flat: None
+Price: 115,000
+Agent Name: Hussain Ali Al Herz
+Agency Name: Fajar Alkhalij
+Call Number: +97338100144
+BF ID: 1124629
+Property Usage: Residential
+Feet Price: BHD. 24.6226335
+Property Size: 433.9 m²
+No. of Roads: 2
+Classification: RB
+
+--- Property 27 ---
+URL: https://bahrainfinder.bh/en/property/villa-for-sale-in-diyar-almuhharaq-3/
+Name: Villa For Sale in Diyar Al Muharraq
+Flat: None
+Price: 213,000
+Agent Name: Fadhel Ahmed
+Agency Name: House Me Real Estate
+Call Number: +97316633000
+BF ID: 1142676
+Property Usage: Residential
+Property Size: 258 m²
+Built-up size: 305 m²
+Built-up status: New
+Bedrooms: 3
+Halls: 2
+Bathrooms: 4
+Furnish: Unfurnished
+No. of Floors: 2
+Garages: 2
+No. of Roads: 1
+Classification: RA
+
+--- Property 28 ---
+URL: https://bahrainfinder.bh/en/property/villa-for-sale-in-amwaj-island/
+Name: Villa For Sale in Amwaj Island
+Flat: None
+Price: 280,000
+Agent Name: House Me
+Agency Name: None
+Call Number: +97316634000
+BF ID: 399338
+Property Usage: Residential
+Property Size: 222.6 m²
+Built-up status: New
+Bedrooms: 4
+Hall: 1
+Bathrooms: 5
+No. of Floors: 3
+No. of Roads: 1
+
+--- Property 29 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-hamalah-365/
+Name: Land For Sale in Hamalah
+Flat: None
+Price: 52,313
+Agent Name: Grnata Group 2
+Agency Name: None
+Call Number: +97336700722
+BF ID: 541700
+Property Usage: Residential
+Feet Price: BHD. 30
+Property Size: 162 m²
+No. of Roads: 1
+Classification: RHA
+
+--- Property 30 ---
+URL: https://bahrainfinder.bh/en/property/land-for-sale-in-sanabis-57/
+Name: Land For Sale in Sanabis
+Flat: None
+Price: 84,000
+Agent Name: Hussain Ali Al Herz
+Agency Name: Fajar Alkhalij
+Call Number: +97338100144
+BF ID: 1062026
+Property Usage: Residential
+Feet Price: BHD. 34.408247
+Property Size: 226.8 m²
+No. of Roads: 1
+Classification: RHB
+
