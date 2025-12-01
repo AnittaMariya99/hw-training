@@ -1,0 +1,17 @@
+Learning Topics:
+
+Web Scraping Using Advanced Modules
+
+Selenium
+
+What is Selenium, and when to use it
+
+Selenium vs Scrapy vs Requests
+
+Example Selenium scripts with webdriver, headless mode
+
+Playwright
+
+cURL
+
+cloudscraper - https://pypi.org/project/cloudscraper/
