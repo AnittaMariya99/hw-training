@@ -3,7 +3,7 @@ import logging
 import requests
 from parsel import Selector
 from pymongo import MongoClient
-from settings import HEADERS, MONGO_URI, DB_NAME, MONGO_COLLECTION_RESPONSE, MONGO_COLLECTION_DATA, MONGO_COLLECTION_URL_FAILED, DataMiningError
+from settings import HEADERS, MONGO_URI,MONGO_DB, MONGO_COLLECTION_RESPONSE, MONGO_COLLECTION_DATA, MONGO_COLLECTION_URL_FAILED,MONGO_HOST,MONGO_PORT
 
 
 class Parser:
@@ -12,11 +12,11 @@ class Parser:
     def __init__(self):
         """Initialize DB connection and filenames."""
         self.client = MongoClient(MONGO_URI)
-        self.db = self.client[DB_NAME]
+        self.db = self.client[MONGO_DB]
         self.collection_response = self.db[MONGO_COLLECTION_RESPONSE]
         self.collection_data = self.db[MONGO_COLLECTION_DATA]
         self.collection_failed = self.db[MONGO_COLLECTION_URL_FAILED]
-        self.mongo = self.client[DB_NAME]
+        self.mongo = self.client[MONGO_DB]
 
 
     # --------------------------------------------------
@@ -92,23 +92,23 @@ class Parser:
         mileage = sel.xpath(MILEAGE_XPATH).get("")
 
         # ITEM YEILD
+        item = {}
+        item["website"] = "ClassicCars"
+        item["url"] = document.get("url")
+        item["image_url"] = document.get("image_url")
+        item["title"] = document.get("title")
+        item["price"] = document.get("price")
+        item["listing_id"] = listing_id
+        item["make"] = make
+        item["model"] = model
+        item["location"] = location
+        item["exterior_color"] = exterior_color
+        item["interior_color"] = interior_color
+        item["mileage"] = mileage
+        item["transmission"] = transmission
+        item["engine"] = engine
 
-        item = {
-            "website": "ClassicCars",
-            "url": document.get("url"),
-            "image_url": document.get("image_url"),
-            "title": document.get("title"),
-            "price": document.get("price"),
-            "listing_id": listing_id,
-            "make": make,
-            "model": model,
-            "location": location,
-            "exterior_color": exterior_color,
-            "interior_color": interior_color,
-            "mileage": mileage,
-            "transmission": transmission,
-            "engine": engine,
-        }
+       
 
         product_item = ProductItem(**item)
         # self.mongo.process(product_item,collection=MONGO_COLLECTION_DATA)  # Mongo insert using items

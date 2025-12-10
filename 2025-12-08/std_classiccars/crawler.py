@@ -1,9 +1,10 @@
 from items import ProductUrlItem
+from mongoengine import connect
 import logging
 import requests
 from parsel import Selector
 from pymongo import MongoClient
-from settings import HEADERS, MONGO_URI, DB_NAME, MONGO_COLLECTION_RESPONSE, BASE_URL
+from settings import HEADERS, MONGO_URI,MONGO_DB, MONGO_COLLECTION_RESPONSE, BASE_URL,MONGO_HOST,MONGO_PORT
 
 
 class Crawler:
@@ -13,10 +14,11 @@ class Crawler:
         """Initialize crawler, DB, logs."""
         logging.info("Initializing..........................................")
         
-        self.client = MongoClient(MONGO_URI)
-        self.db = self.client[DB_NAME]
-        self.collection = self.db[MONGO_COLLECTION_RESPONSE]
-        self.mongo = self.client[DB_NAME]
+        # self.client = MongoClient(MONGO_URI)
+        # self.db = self.client[DB_NAME]
+        # self.collection = self.db[MONGO_COLLECTION_RESPONSE]
+        # self.mongo = self.client[DB_NAME]
+        self.mongo = connect(db=MONGO_DB, host=MONGO_HOST, alias="default", port=MONGO_PORT)
 
     # ---------------------------------------------------------
     # START CRAWLER
@@ -49,9 +51,6 @@ class Crawler:
                 break
 
 
-    # ---------------------------------------------------------
-    # PARSE ITEMS 
-    # ---------------------------------------------------------
     def parse_item(self, response):
         """Extract property/car listing links and basic details.sel = Selector(html)"""
 
@@ -88,18 +87,18 @@ class Crawler:
             if price:
                 price = price.strip()
 
-            item = {
-                "url": product_link,
-                "image_url": image_url,
-                "title": title,
-                "price": price
-            }
+            item = {}
+            item['url'] = product_link
+            item['image_url'] = image_url
+            item['title'] = title
+            item['price'] = price
             try:
                 product_item = ProductUrlItem(**item)
-                self.mongo.process(product_item,collection=MONGO_COLLECTION_RESPONSE)  # Mongo insert using items
+                product_item.save()
+
 
                 # self.collection.insert_one(product_item)
-                print(product_item)
+                # print(product_item)
 
             except Exception as e:
                 logging.exception(f"Failed to insert item into MongoDB: {e}")
@@ -119,7 +118,7 @@ class Crawler:
         """Close function for all module object closing"""
         
         logging.info(f"Closing DB connection...")
-        self.client.close()
+        self.mongo.close()
 
 
 if __name__ == "__main__":

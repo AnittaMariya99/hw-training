@@ -1,9 +1,6 @@
 from mongoengine import DynamicDocument, StringField, BooleanField, DictField, ListField, IntField, FloatField
 from settings import (
-
-   MONGO_COLLECTION_URL_FAILED,
-
-
+   MONGO_COLLECTION_URL_FAILED,MONGO_COLLECTION_RESPONSE
 )
 
 
@@ -29,7 +26,7 @@ class ProductItem(DynamicDocument):
 class ProductUrlItem(DynamicDocument):
     """initializing URL fields and its Data-Types"""
 
-    #meta = {"db_alias": "default", "collection": MONGO_COL_URL}
+    meta = {"db_alias": "default", "collection": MONGO_COLLECTION_RESPONSE}
     url = StringField(required=True)
     image_url = StringField()
     title = StringField()

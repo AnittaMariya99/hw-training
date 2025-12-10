@@ -21,22 +21,18 @@ FREQUENCY = ""
 BASE_URL = "https://classiccars.com/listings/find"
 
 
-datetime_obj = datetime.now(pytz.timezone("Asia/Kolkata"))
 
-iteration = datetime_obj.strftime("%Y_%m_%d")
-YEAR = datetime_obj.strftime("%Y")
-MONTH = datetime_obj.strftime("%m")
-DAY = datetime_obj.strftime("%d")
-MONTH_VALUE = calendar.month_abbr[int(MONTH.lstrip("0"))]
-WEEK = (int(DAY) - 1) // 7 + 1
 
-FILE_NAME = f"dillards_{iteration}"
+FILE_NAME = f"classiccars"
 
 # Mongo db and collections
 MONGO_URI = "mongodb://localhost:27017/"
-DB_NAME = "classiccars_db"
+MONGO_HOST = "localhost"
+MONGO_PORT = 27017
+MONGO_DB = "classiccars_db"
 
-MONGO_DB = f"dillards_{iteration}"
+
+
 MONGO_COLLECTION_RESPONSE = f"{PROJECT_NAME}_url"
 MONGO_COLLECTION_CATEGORY = f"{PROJECT_NAME}_category_url"
 MONGO_COLLECTION_URL_FAILED = f"{PROJECT_NAME}_url_failed"
