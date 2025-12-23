@@ -1,0 +1,28 @@
+Target sites:
+https://www.firstweber.com/roster/Agents
+
+Fields to extract:
+profile_url	
+first_name	
+middle_name	
+last_name	
+title	
+description	
+address	
+street_address	
+city	
+state	
+zip_code	
+country	
+languages	
+website	
+social_links	
+image_url	
+agent_phone_numbers
+
+
+
+Data Format :
+json
+
+completed
