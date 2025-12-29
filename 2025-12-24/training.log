@@ -1,0 +1,21 @@
+ Website to scrape:https://2xlhome.com
+
+Fields to extract:
+url
+product_id
+product_name
+product_color
+material
+quantity
+details_string
+specification
+price
+wasprice
+product_type
+breadcrumb
+stock
+image
+
+
+Data Format :
+CSV
