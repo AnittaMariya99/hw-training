@@ -4,7 +4,8 @@ import time
 import html as html_module
 import math
 import logging
-from curl_cffi import requests
+# from curl_cffi import requests
+import hrequests
 from lxml import html
 from urllib.parse import urljoin
 
@@ -38,8 +39,8 @@ class Crawler:
                 "sortBy": "firstname",
             }
 
-            response = requests.get(API_URL,headers=HEADERS,params=params,impersonate="chrome")
-
+            # response = requests.get(API_URL,headers=HEADERS,params=params,impersonate="chrome")
+            response = hrequests.get(API_URL,headers=HEADERS,params=params)
             if response.status_code == 200:
                 # Parse items
                 total_pages = self.parse_item(response)
