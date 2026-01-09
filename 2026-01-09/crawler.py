@@ -7,10 +7,10 @@ import logging
 from curl_cffi import requests
 from lxml import html
 from urllib.parse import urljoin
-from mongoengine import connect
-from settings import (BASE_URL,API_URL,HEADERS,PAGE_SIZE,MONGO_DB,MONGO_URI,)
+# from mongoengine import connect
+from settings import (BASE_URL,API_URL,HEADERS,PAGE_SIZE,MONGO_DB,MONGO_URI,MONGO_COLLECTION_RESPONSE)
 from items import ProductResponseItem
-
+from pymongo import MongoClient
 
 class Crawler:
     """Crawler for FirstWeber Agents"""
@@ -20,7 +20,10 @@ class Crawler:
 
         # MongoEngine connection
         # self.mongo=connect(db=MONGO_DB,host=MONGO_HOST,port=MONGO_PORT,alias="default")
-        self.mongo = connect(db=MONGO_DB, host=MONGO_URI, alias="default")
+        self.mongo_client = MongoClient(MONGO_URI)
+        self.mongo = self.mongo_client[MONGO_DB]
+
+
     
     def start(self):
 
@@ -70,7 +73,11 @@ class Crawler:
         urls = [urljoin(BASE_URL, u) for u in urls]
 
         for u in urls:
-            ProductResponseItem(url=u).save()
+            # ProductResponseItem(url=u).save()
+            item = {
+                "url": u
+            }
+            self.mongo[MONGO_COLLECTION_RESPONSE].insert_one(item)
 
         return math.ceil(total_count / PAGE_SIZE)
 
