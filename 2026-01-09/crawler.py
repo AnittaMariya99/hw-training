@@ -7,7 +7,7 @@ import logging
 from curl_cffi import requests
 from lxml import html
 from urllib.parse import urljoin
-# from mongoengine import connect
+
 from settings import (BASE_URL,API_URL,HEADERS,PAGE_SIZE,MONGO_DB,MONGO_URI,MONGO_COLLECTION_RESPONSE)
 from items import ProductResponseItem
 from pymongo import MongoClient
@@ -18,8 +18,6 @@ class Crawler:
     def __init__(self):
         logging.info("Initializing crawler...")
 
-        # MongoEngine connection
-        # self.mongo=connect(db=MONGO_DB,host=MONGO_HOST,port=MONGO_PORT,alias="default")
         self.mongo_client = MongoClient(MONGO_URI)
         self.mongo = self.mongo_client[MONGO_DB]
 
