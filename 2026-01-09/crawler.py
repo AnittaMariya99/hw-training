@@ -9,7 +9,7 @@ from lxml import html
 from urllib.parse import urljoin
 
 from settings import (BASE_URL,API_URL,HEADERS,PAGE_SIZE,MONGO_DB,MONGO_URI,MONGO_COLLECTION_RESPONSE)
-from items import ProductResponseItem
+# from items import ProductResponseItem
 from pymongo import MongoClient
 
 class Crawler:
