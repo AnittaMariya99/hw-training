@@ -92,9 +92,9 @@ class Crawler:
                 except Exception as e:
                     logging.error(f"Mongo save failed for {full_url}: {e}")
 
-            # Recursively save children
-            if cat.get("children"):
-                self.save(cat["children"], indent + 4)
+            # # Recursively save children
+            # if cat.get("children"):
+            #     self.save(cat["children"], indent + 4)
         
 
     def close(self):
