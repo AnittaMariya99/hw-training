@@ -2,7 +2,7 @@ import logging
 import json
 from curl_cffi import requests
 # from items import ProductCategoryUrlItem
-from settings import BASE_URL, HEADERS, MONGO_DB, MONGO_HOST, API_URL,MONGO_URI,MONGO_COLLECTION_CATEGORY
+from settings import BASE_URL, HEADERS, MONGO_DB, API_URL,MONGO_URI,MONGO_COLLECTION_CATEGORY
 # from mongoengine import connect
 from pymongo import MongoClient
 
