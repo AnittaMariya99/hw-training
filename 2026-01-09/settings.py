@@ -1,7 +1,7 @@
 from datetime import datetime
 import calendar
 import logging
-import pytz
+# import pytz
 
 logging.basicConfig(
     level=logging.INFO,
@@ -16,16 +16,16 @@ PROJECT_NAME = "LuluHypermarket"
 FREQUENCY = "daily"
 BASE_URL = "https://gcc.luluhypermarket.com/en-ae/"
 
-datetime_obj = datetime.now(pytz.timezone("Asia/Kolkata"))
-# iteration = datetime_obj.strftime("%Y_%m_%d")
-iteration = "2025_12_19"
-YEAR = datetime_obj.strftime("%Y")
-MONTH = datetime_obj.strftime("%m")
-DAY = datetime_obj.strftime("%d")
-MONTH_VALUE = calendar.month_abbr[int(MONTH.lstrip("0"))]
-WEEK = (int(DAY) - 1) // 7 + 1
+# datetime_obj = datetime.now(pytz.timezone("Asia/Kolkata"))
+# # iteration = datetime_obj.strftime("%Y_%m_%d")
+# iteration = "2025_12_19"
+# YEAR = datetime_obj.strftime("%Y")
+# MONTH = datetime_obj.strftime("%m")
+# DAY = datetime_obj.strftime("%d")
+# MONTH_VALUE = calendar.month_abbr[int(MONTH.lstrip("0"))]
+# WEEK = (int(DAY) - 1) // 7 + 1
 
-FILE_NAME = f"LuluHypermarket_{iteration}.csv"
+# FILE_NAME = f"LuluHypermarket_{iteration}.csv"
 
 # Mongo db and collections
 # MONGO_URI = "mongodb://localhost:27017/"
@@ -35,7 +35,7 @@ MONGO_PORT = 27017
 MONGO_URI = "mongodb://mongotraining:a4892e52373844dc4862e6c468d11b6df7938e16@167.172.244.21:27017/?authSource=admin"
 
 # Mongo db and collections
-MONGO_DB = f"LuluHypermarket_ae_{iteration}"
+MONGO_DB = f"LuluHypermarket_ae_sample"
 MONGO_COLLECTION_URL = f"{PROJECT_NAME}_url"
 MONGO_COLLECTION_CATEGORY = f"{PROJECT_NAME}_category"
 MONGO_COLLECTION_URL_FAILED = f"{PROJECT_NAME}_url_failed"
