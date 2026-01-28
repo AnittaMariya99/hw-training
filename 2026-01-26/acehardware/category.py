@@ -2,9 +2,7 @@ from settings import MONGO_URI,MONGO_DB,CATEGORY_URL,MONGO_COLLECTION_CATEGORY
 import requests
 import logging
 from pymongo import MongoClient
-import json
 from playwright.sync_api import sync_playwright
-
 class CategoryCrawler:
     """Crawling Urls"""
 
@@ -12,7 +10,6 @@ class CategoryCrawler:
         """Initialize crawler, DB, logs."""
         self.mongo_client = MongoClient(MONGO_URI)
         self.mongo = self.mongo_client[MONGO_DB]
-        # self.mongo = self.mongo_client['acehardware_db']
         
 
 
@@ -54,38 +51,49 @@ class CategoryCrawler:
 
         data = response.json()
 
-        categories_tree = data.get("data", {}).get("categoriesTree", {})
-        items = categories_tree.get("items", [])
+        items = data.get("data", {}).get("categoriesTree", {}).get("items", [])
+        #filter items where content > name is Departments
+        items = [item for item in items if item.get("content", {}).get("name", "") == "Departments"]
 
         stack = [(item, "https://www.acehardware.com") for item in items]
+
+        count = 0
 
 
         while stack:
             curr, base_url = stack.pop()
             isDisplayed = curr.get("isDisplayed", False)
+            parentCategory = curr.get("parentCategory", {})
             content = curr.get("content", {})
             slug = content.get("slug", "")
             name = content.get("name", "")
             categoryId = curr.get("categoryId", "")
 
+            if not isDisplayed:
+                continue
 
             url = f"{base_url}/{slug}" if slug else base_url
             children = curr.get("childrenCategories", [])
+            # Filter children with isDisplayed = True, it should not be null
+            children = [child for child in children if child.get("isDisplayed", False)]
 
             if not children:
             
                 item = {
                     "url": url,
                     "category_name": name,
-                    "category_id": categoryId
-                    
+                    "category_id": categoryId     
                 }
 
+                logging.info(f"Found category: {name} - {url}")
+                count += 1
                 self.mongo[MONGO_COLLECTION_CATEGORY].insert_one(item)
 
             else:
                 for child in reversed(children):
                     stack.append((child, url))
+
+        logging.info(f"Total categories found: {count}")
 
     def close(self):
         """Close function for all module object closing"""
