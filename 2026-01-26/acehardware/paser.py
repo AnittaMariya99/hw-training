@@ -122,18 +122,25 @@ class Parser:
         # -------------------------
         # FINAL ITEM
         # -------------------------
-
+        unit_of_issue = ""
+        manufacturer_name = ""
+        qty_per_uoi = ""
+        model_number = ""
 
         item = {
             "company_name": "acehardware",
-            "brand": brand,
+            "manufacturer_name": manufacturer_name,
+            "brand_name": brand,
             "manufacturer_part_number": manufacturer_part_number,
-            "vendor_part_number": vendor_part_number,
+            "vendor/seller_part_number": vendor_part_number,
             "item_name": product.get("product_name"),
             "full_product_description": description,
             "price": price,
             "country_of_origin": country_of_origin,
+            "unit_of_issue":unit_of_issue,
+            "qty_per_uoi":qty_per_uoi,
             "upc": upc,
+            "model_number":model_number,
             "product_category": breadcrumbs,
             "url": product.get("url"),
             "availability": availability,
