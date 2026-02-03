@@ -1,0 +1,49 @@
+Implementation of a data-cleaning pipeline for CSV export.
+
+meeting completed
+
+learing topics:
+Function
+Class
+Object
+OOP concepts
+self argument
+Constructor, destructor
+File operations
+Positional arguments(args), Keyword arguments(kwargs)
+Generators
+return, yield
+try, except
+String formatting
+Module importing
+Python memory reference
+List comprehension
+Exceptions and errors
+Code readability, optimization, reliability
+Python standards - PEP8
+Best practice coding
+Inspect - Tabs
+GET & POST request
+PUT, DELETE, HEAD, PATCH, OPTIONS
+Inspect AJAX-loaded URLs
+Client-side JavaScript execution
+Request and response headers
+Cookie, session
+User-agent
+API identification and data scraping
+Sitemaps - usage, possibilities, limitations
+requests - https://docs.python-requests.org/en/master/
+parsel - https://parsel.readthedocs.io/en/latest/usage.html
+re - https://www.w3schools.com/python/python_regex.asp
+json - https://www.w3schools.com/python/python_json.asp
+csv - https://docs.python.org/3/library/csv.html
+pymongo - https://pymongo.readthedocs.io/en/stable/tutorial.html
+pika - https://pika.readthedocs.io/en/stable/
+logging - https://docs.python.org/3/library/logging.html
+ast
+datetime
+urllib
+time
+xml
+lxml
+base64 - https://docs.python.org/3/library/base64.html

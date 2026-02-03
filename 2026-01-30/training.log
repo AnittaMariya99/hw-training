@@ -1,0 +1,32 @@
+learning topics:
+os
+random
+ftplib
+dropbox
+boto3
+js2py
+Ipython
+Request handling
+Response handling
+Post request & payloads
+Cookies, session
+Certificate verification
+API identification and data extraction (".get()" calls)
+Proxies - need for both HTTP and HTTPS proxies in the proxies dict
+Exceptions
+Better coding with Python requests
+nohup
+scrapy - https://docs.scrapy.org/en/latest/intro/tutorial.htmlRequestFormRequestResponseShell, inspect_responseSelector
+Pagination and other data limitations
+Introduction to pagination conceptsReal-life pagination examplesTypes: numbered, infinite scroll, load-morePagination limits and anti-bot measuresOvercoming pagination barriers (e.g., scroll simulation, API usage)Dynamic listing page loadingFilters and sortingImportance of using filters & sortingApplying filters via URL parameters, form submissionsCode examples: price range, brand name filtering
+
+Anti-scraping measures and evasion Techniques 
+IP blockingHeaders-based blockingCrawling pattern detectionCaptcha verificationJavascript ValidationPremium services - Perimeterx, Distilnetwork, Recaptcha, etc
+
+Web Scraping Using Advanced Modules
+Selenium  What is Selenium, and when to use it
+Selenium vs Scrapy vs Requests
+Example Selenium scripts with webdriver, headless mode
+PlaywrightPlaywright
+cURLcURL
+cloudscraper - https://pypi.org/project/cloudscraper/
