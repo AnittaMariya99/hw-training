@@ -166,3 +166,15 @@ product["instruction_for_use"] = sel.xpath(
 product["storage_instructions"] = sel.xpath(
     "//div[@data-testid='pdp-storage-info']//p//text()[normalize-space()]"
 ).get(default="")
+
+
+
+#__________________________________________________________findings________________________________________________
+"1.Akamai is challenging due to advanced bot detection, causing inconsistent blocking even when responses return HTTP 200.
+2.Heavy site loading issue found
+3.Access Denied issue on multiple requests
+4. Have to use different approaches for requests, which expires in few requests"
+5.category is done using GET api call with HTML response.
+6.crawler is done using GET api call with JSON response
+7.parser response is html format called with GET method"
+
