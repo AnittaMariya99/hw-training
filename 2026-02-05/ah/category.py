@@ -1,11 +1,11 @@
+from curl_cffi import requests
 from settings import MONGO_URI,MONGO_DB,CATEGORY_URL,MONGO_COLLECTION_CATEGORY, BASE_URL
-import hrequests     
 import logging
 from urllib.parse import urljoin,urlparse
 from pymongo import MongoClient
 from parsel import Selector
-session = hrequests.Session()
 from items import CategoryUrlItem
+session = requests.Session()
 
 
 class CategoryCrawler:
@@ -15,6 +15,8 @@ class CategoryCrawler:
         """Initialize crawler, DB, logs."""
         self.mongo_client = MongoClient(MONGO_URI)
         self.mongo = self.mongo_client[MONGO_DB]
+       
+
         
 
 
@@ -40,7 +42,7 @@ class CategoryCrawler:
             'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36',
         }
 
-        response=session.get(CATEGORY_URL,headers=headers)
+        response=session.get(CATEGORY_URL,headers=headers,impersonate="firefox")
         logging.info(f"Response status code: {response.status_code}")
 
         if response.status_code == 200:
@@ -78,9 +80,9 @@ class CategoryCrawler:
             item["link"]=link
             item["category_id"]=category_id
             item["category_slug"]=category_slug
-            # self.mongo[MONGO_COLLECTION_CATEGORY].insert_one(item)
-            CategoryUrlItem(**item).save()
-
+            product_item = CategoryUrlItem(**item)
+            product_item.validate()
+            self.mongo[MONGO_COLLECTION_CATEGORY].insert_one(item)
 
     def close(self):
         """Close resources"""

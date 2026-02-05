@@ -2,20 +2,20 @@ from mongoengine import DynamicDocument, StringField, IntField, ListField, DictF
 from settings import MONGO_COLLECTION_CATEGORY, MONGO_COLLECTION_RESPONSE, MONGO_COLLECTION_DATA, MONGO_COLLECTION_URL_FAILED
 
 class CategoryUrlItem(DynamicDocument):
-    meta = {"collection": MONGO_COLLECTION_CATEGORY}
+    meta = {"db_alias": "default"}
     name = StringField()
     link = StringField(unique=True)
     category_id = StringField()
     category_slug = StringField()
 
 class ProductUrlItem(DynamicDocument):
-    meta = {"collection": MONGO_COLLECTION_RESPONSE}
-    id = StringField(required=True, unique=True)
+    meta = {"db_alias": "default"}
+    product_id = StringField(required=True, unique=True)
     link = StringField()      
     title = StringField()
 
 class ProductItem(DynamicDocument):
-    meta = {"collection": MONGO_COLLECTION_DATA}
+    meta = {"db_alias": "default"}
     unique_id = StringField(unique=True)
     extraction_date = StringField()
     product_name = StringField()
@@ -58,5 +58,5 @@ class ProductItem(DynamicDocument):
     servings_per_pack = StringField()
 
 class ProductFailedItem(DynamicDocument):
-    meta = {"db_alias": "default", "collection": MONGO_COLLECTION_URL_FAILED}
+    meta = {"db_alias": "default"}
     url = StringField(required=True)
