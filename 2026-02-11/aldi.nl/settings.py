@@ -5,7 +5,10 @@ logging.basicConfig(
     format="%(asctime)s %(levelname)s:%(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
 )
-
+HEADERS ={
+    
+    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36',
+}
 # basic details
 PROJECT = "aldi.nl"
 CLIENT_NAME = ""

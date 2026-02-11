@@ -1,4 +1,4 @@
-from settings import MONGO_URI, MONGO_DB, MONGO_COLLECTION_CATEGORY, MONGO_COLLECTION_RESPONSE, BASE_PRODUCT_URL
+from settings import MONGO_URI, MONGO_DB, MONGO_COLLECTION_CATEGORY, MONGO_COLLECTION_RESPONSE, BASE_PRODUCT_URL, HEADERS
 from pymongo import MongoClient
 import logging
 import requests
@@ -26,7 +26,7 @@ class Crawler:
 
         categories = list(self.mongo[MONGO_COLLECTION_CATEGORY].find())
         logging.info(f"Loaded {len(categories)} categories from DB")
-
+        
         for category in categories:
             category_sub_name=category.get("sub_name", "")
             category_sub_link=category.get("sub_link", "")
@@ -34,7 +34,7 @@ class Crawler:
             if not category_sub_name or not category_sub_link:
                 continue
 
-            response = session.get(category_sub_link)
+            response = session.get(category_sub_link,headers=HEADERS)
             if response.status_code == 200:
                 self.parse(response)
             else:

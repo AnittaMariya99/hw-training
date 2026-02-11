@@ -1,5 +1,5 @@
 import requests
-from settings import MONGO_URI,MONGO_DB,CATEGORY_URL,MONGO_COLLECTION_CATEGORY, BASE_URL
+from settings import MONGO_URI,MONGO_DB,CATEGORY_URL,MONGO_COLLECTION_CATEGORY, BASE_URL,HEADERS
 import logging
 from pymongo import MongoClient
 from parsel import Selector
@@ -20,7 +20,7 @@ class CategoryCrawler:
     def start(self):
         """Requesting Start url"""
         logging.info("Fetching homepage to extract category names...")
-        response = session.get(CATEGORY_URL)
+        response = session.get(CATEGORY_URL,headers=HEADERS)
         if response.status_code == 200:
             self.parse(response)
         else:

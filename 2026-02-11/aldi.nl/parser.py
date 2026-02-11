@@ -5,7 +5,7 @@ import re
 import json 
 from parsel import Selector
 from urllib.parse import urljoin
-from settings import MONGO_URI, MONGO_DB, MONGO_COLLECTION_RESPONSE, MONGO_COLLECTION_DATA, MONGO_COLLECTION_URL_FAILED, BASE_URL
+from settings import MONGO_URI, MONGO_DB, MONGO_COLLECTION_RESPONSE, MONGO_COLLECTION_DATA, MONGO_COLLECTION_URL_FAILED, BASE_URL, HEADERS
 from items import ProductItem
 session = requests.Session()
 
@@ -38,7 +38,7 @@ class Parser:
             link = product.get('link')
             if not link:
                 continue
-            response = session.get(link)
+            response = session.get(link, headers=HEADERS)
             logging.info(f"Status code: {response.status_code}")
             if response.status_code == 200:
                 self.parse_item(response,link)
