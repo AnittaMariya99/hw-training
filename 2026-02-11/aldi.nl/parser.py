@@ -27,7 +27,7 @@ class Parser:
 
     def start(self):
         """Start parsing products"""
-        products = list(self.mongo[MONGO_COLLECTION_RESPONSE].find().limit(400))
+        products = list(self.mongo[MONGO_COLLECTION_RESPONSE].find().limit(300))
 
 
         total = len(products)
@@ -78,7 +78,7 @@ class Parser:
                     res = item[1].get("res", {})
                     current_category_name = res.get("parentCategory", {}).get("data", {}).get("current", {}).get("categoryName", "")
                     parent_category_name = res.get("parentCategory", {}).get("data", {}).get("parent", {}).get("categoryName", "")
-                    
+                    parent_category_error_name= res.get("parentCategory", {}).get("error", {}).get("details", {}).get("current", {}).get("categoryName", "")
 
                     products = res.get("products", [])
                     if products:
@@ -87,6 +87,8 @@ class Parser:
                         breadcrumb = f"ALDI Supermarkten > Product"
                         if parent_category_name:
                             breadcrumb += f" > {parent_category_name}"
+                        elif parent_category_error_name:
+                            breadcrumb += f" > {parent_category_error_name}"
                         if current_category_name:
                             breadcrumb += f" > {current_category_name}"
                         breadcrumb += f" > {product_name}"
