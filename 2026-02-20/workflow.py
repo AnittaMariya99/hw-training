@@ -32,20 +32,16 @@ print(response.status_code)
 sel = Selector(response.text)
 
 categories = []
-for category in sel.css("div.category-list__item"):
-    name = category.css("a.category-list__link::text").get().strip()
-    link = category.css("a.category-list__link::attr(href)").get()
-    categories.append({"name": name, "link": link})
-    print(f"  - Found category: {name} ({link})")
-
+for a in sel.xpath('//a[@class="ws-category-tree-navigation-button ws-btn ws-btn--secondary-link ws-btn--large"]'):
+    href = a.xpath("./@href").get("")
+    if not href.startswith("/kategorie/"):
+        continue
 
 #__________________________________________________________crawler_________________________________________________
 
 from curl_cffi import requests
 from parsel import Selector
-import csv
-import json
-import time
+
 
 BASE_URL = "https://shop.billa.at"
 
@@ -72,13 +68,20 @@ response = requests.get( url,headers=HEADERS,impersonate="chrome",)
 print(f"  [{response.status_code}] {url}")
 if response.status_code == 200:
     sel = Selector(response.text)
+
+    total_pages = 1
+    for href in sel.xpath('//a[contains(@href, "?page=")]/@href').getall():
+        try:
+            page_num = int(href.split("?page=")[-1].split("&")[0])
+            if page_num > total_pages:
+                total_pages = page_num
+        except ValueError:
+            pass
+    print(f"  Total pages: {total_pages}")
     #__________________________________________________________parser_________________________________________________
 
 from curl_cffi import requests
 from parsel import Selector
-import csv
-import json
-import re
 from datetime import date
 
 BASE_URL   = "https://shop.billa.at"
