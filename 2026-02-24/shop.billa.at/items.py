@@ -75,7 +75,8 @@ class ProductItem(DynamicDocument):
     image_url_6 = StringField()
     label_information = StringField()
     manufacturer_address = StringField()
-    net_content = StringField()
+    netweight = StringField()
+    dimensions = StringField()
     
 
     

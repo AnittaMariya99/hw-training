@@ -131,9 +131,9 @@ class ProductParser:
         manufacturer_address = get_row_content("Hersteller")
         label_information = get_row_content("Labelinformationen")
 
-        netcontent = get_row_content("Abmessungen")
-        netcontent_pattern = r'Netto(?:gehalt|gewicht):\s*([\d\s.,]+)\s*([A-Za-zÄÖÜäöüß]+)'
-        match = re.search(netcontent_pattern, netcontent, re.IGNORECASE)
+        dimensions= get_row_content("Abmessungen")
+        netweight_pattern = r'Netto(?:gehalt|gewicht):\s*([\d\s.,]+)\s*([A-Za-zÄÖÜäöüß]+)'
+        match = re.search(netweight_pattern, dimensions, re.IGNORECASE)
 
         if not match:
             return ""
@@ -146,7 +146,7 @@ class ProductParser:
         )
 
         grammage_unit = match.group(2).strip()
-        netcontent = f"{grammage_quantity} {grammage_unit}"
+        netweight = f"{grammage_quantity} {grammage_unit}"
             
         # Images
         images_raw = product_ld.get("image", [])
@@ -174,8 +174,8 @@ class ProductParser:
         item["pdp_url"] = url
         item["ingredients"] = ingredients
         item["nutritional_information"] = nutrition
-        item["netcontent"] = netcontent
-        item["site_shown_uom"] = netcontent
+        item["netweight"] = netweight
+        item["site_shown_uom"] = netweight
         item["grammage_quantity"] = grammage_quantity
         item["grammage_unit"] = grammage_unit
         item["product_unique_key"] = unique_id + "P"
